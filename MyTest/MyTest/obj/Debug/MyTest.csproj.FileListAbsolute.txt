@@ -1,0 +1,14 @@
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\bin\Debug\MyTest.exe.config
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\bin\Debug\MyTest.exe
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\bin\Debug\MyTest.pdb
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.csprojAssemblyReference.cache
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.FirstForm.resources
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.Properties.Resources.resources
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.csproj.GenerateResource.cache
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.exe
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.pdb
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.authorizationTeacher.resources
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.registrationTeacher.resources
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.NameTest.resources
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.newTest.resources
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.Exit.resources
