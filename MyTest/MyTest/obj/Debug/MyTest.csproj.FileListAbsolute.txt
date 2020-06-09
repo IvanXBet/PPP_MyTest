@@ -12,3 +12,4 @@ D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.re
 D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.NameTest.resources
 D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.newTest.resources
 D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.Exit.resources
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.typeQuestion.resources

@@ -12,9 +12,14 @@ namespace MyTest
 {
     public partial class NameTest : Form
     {
-        public NameTest()
+        private newTest m_parent;
+
+        
+
+        public NameTest(newTest newTest)
         {
             InitializeComponent();
+            m_parent = newTest;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -31,10 +36,18 @@ namespace MyTest
             else {
                 
                 ClassTotal.nameTest = textBoxNameTest.Text;
-                newTest newTest = new newTest();
+
                 this.Close();
-                newTest.ShowDialog();
+                //newTest.Owner = this;
+                //newTest.toolStripLabelNameTest.Text =$"Название теста {textBoxNameTest.Text}";
+
+                //newTest.ShowDialog();
             }
+        }
+
+        private void NameTest_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            m_parent.Test();
         }
     }
 }

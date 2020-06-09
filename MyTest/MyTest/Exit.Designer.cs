@@ -86,6 +86,8 @@
             this.Controls.Add(this.labelNameTest);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonOK);
+            this.MaximumSize = new System.Drawing.Size(707, 311);
+            this.MinimumSize = new System.Drawing.Size(707, 311);
             this.Name = "Exit";
             this.Text = "Exit";
             this.ResumeLayout(false);

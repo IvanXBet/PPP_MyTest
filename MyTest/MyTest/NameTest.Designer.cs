@@ -47,7 +47,7 @@
             this.buttonBack.FlatAppearance.BorderSize = 0;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F);
-            this.buttonBack.ForeColor = System.Drawing.Color.White;
+            this.buttonBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
             this.buttonBack.Location = new System.Drawing.Point(138, 182);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(84, 33);
@@ -62,7 +62,7 @@
             this.buttonOK.FlatAppearance.BorderSize = 0;
             this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOK.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F);
-            this.buttonOK.ForeColor = System.Drawing.Color.White;
+            this.buttonOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
             this.buttonOK.Location = new System.Drawing.Point(250, 182);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(166, 33);
@@ -97,6 +97,7 @@
             this.Controls.Add(this.textBoxNameTest);
             this.Name = "NameTest";
             this.Text = "NameTest";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NameTest_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

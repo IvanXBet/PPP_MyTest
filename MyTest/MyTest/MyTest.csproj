@@ -90,6 +90,12 @@
     <Compile Include="registrationTeacher.Designer.cs">
       <DependentUpon>registrationTeacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="typeQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="typeQuestion.Designer.cs">
+      <DependentUpon>typeQuestion.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="authorizationTeacher.resx">
       <DependentUpon>authorizationTeacher.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +122,9 @@
     </Compile>
     <EmbeddedResource Include="registrationTeacher.resx">
       <DependentUpon>registrationTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="typeQuestion.resx">
+      <DependentUpon>typeQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MyTestDataSet.xsc">
       <DependentUpon>MyTestDataSet.xsd</DependentUpon>
