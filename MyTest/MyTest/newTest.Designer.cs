@@ -223,7 +223,6 @@
             this.textBoxQuestion.Name = "textBoxQuestion";
             this.textBoxQuestion.Size = new System.Drawing.Size(813, 113);
             this.textBoxQuestion.TabIndex = 1;
-            this.textBoxQuestion.Text = "textBox";
             // 
             // splitContainer3
             // 
@@ -289,6 +288,7 @@
             this.buttonSaveQuestion.TabIndex = 26;
             this.buttonSaveQuestion.Text = "Сохранить вопрос";
             this.buttonSaveQuestion.UseVisualStyleBackColor = false;
+            this.buttonSaveQuestion.Click += new System.EventHandler(this.buttonSaveQuestion_Click);
             // 
             // toolStrip1
             // 
@@ -404,7 +404,7 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         public System.Windows.Forms.TextBox textBoxQuestion;
         public System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.Button buttonSaveQuestion;
+        public System.Windows.Forms.Button buttonSaveQuestion;
         public System.Windows.Forms.Button buttonAddAnswer;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabelDate;
@@ -412,6 +412,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabelQuantityQuestions;
         private System.Windows.Forms.ToolStripLabel toolStripLabelNumberQuestion;
         private System.Windows.Forms.ToolStripLabel toolStripLabelTypeQuestion;
-        private System.Windows.Forms.Button buttonСancelQuestion;
+        public System.Windows.Forms.Button buttonСancelQuestion;
     }
 }

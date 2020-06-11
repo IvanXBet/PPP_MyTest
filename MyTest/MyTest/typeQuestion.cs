@@ -29,13 +29,16 @@ namespace MyTest
                 m_parent.splitContainer3.Panel1.Controls.Clear();
                 m_parent.textBoxQuestion.Text = "";
                 m_parent.buttonAddAnswer.Visible = true;
+                m_parent.buttonSaveQuestion.Visible = true;
+                m_parent.buttonСancelQuestion.Visible = true;
+
                 switch (ClassTotal.type)
                 {
                     case "Одиночный выбор":
                         for (int i = 0; i < 4; i++)
                         {
                             ClassTotal.RadioButtonDynamic(m_parent.splitContainer3.Panel1, 3, 3 + (i * 40), 17, 20);
-                            ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 25, 3 + (i * 40), 637, 20);
+                            ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 25, 3 + (i * 40), 637, 30);
                         }
                         
                         break;
@@ -44,29 +47,29 @@ namespace MyTest
                         m_parent.splitContainer3.Panel1.Controls.Clear();
                         for (int i = 0; i < 4; i++)
                         {
-                            ClassTotal.CheckBoxDynamic(m_parent.splitContainer3.Panel1, 3, 3 + (i * 40), 17, 20);
-                            ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 25, 3 + (i * 40), 637, 20);
+                            ClassTotal.CheckBoxDynamic(m_parent.splitContainer3.Panel1, 3, 3 + (i * 40), 17, 30);
+                            ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 25, 3 + (i * 40), 637, 30);
                         }
                         
                         break;
 
                     case "Ввод слова":
-                        ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 3, 3, 330, 20);
+                        ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 3, 3, 330, 30);
                         
                         break;
 
                     case "Ввод значения":
                        
 
-                        ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 3, 3, 330, 20);
+                        ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 3, 3, 330, 30);
                        
                         break;
 
                     case "На соответствие":
                         for (int i = 0; i < 4; i++)
                         {
-                            ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 17, 3 + (i * 40), 300, 20);
-                            ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 348, 3 + (i * 40), 300, 20);
+                            ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 17, 3 + (i * 40), 300, 30);
+                            ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 348, 3 + (i * 40), 300, 30);
                         }
                        
                         break;

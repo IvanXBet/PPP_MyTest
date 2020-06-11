@@ -52,6 +52,7 @@
     <Compile Include="authorizationTeacher.Designer.cs">
       <DependentUpon>authorizationTeacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassQuestion.cs" />
     <Compile Include="ClassTotal.cs" />
     <Compile Include="Exit.cs">
       <SubType>Form</SubType>
