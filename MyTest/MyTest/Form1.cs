@@ -28,5 +28,10 @@ namespace MyTest
             this.Hide();
             authorizationTeacher.Show();
         }
+
+        private void FirstForm_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

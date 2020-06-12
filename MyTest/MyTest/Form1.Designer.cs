@@ -103,6 +103,7 @@
             this.MinimumSize = new System.Drawing.Size(387, 378);
             this.Name = "FirstForm";
             this.Text = "Главное меню приложения";
+            this.Load += new System.EventHandler(this.FirstForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

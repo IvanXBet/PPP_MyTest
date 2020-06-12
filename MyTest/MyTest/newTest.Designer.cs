@@ -95,21 +95,22 @@
             // новыйТестToolStripMenuItem1
             // 
             this.новыйТестToolStripMenuItem1.Name = "новыйТестToolStripMenuItem1";
-            this.новыйТестToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.новыйТестToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.новыйТестToolStripMenuItem1.Text = "Новый тест";
             this.новыйТестToolStripMenuItem1.Click += new System.EventHandler(this.новыйТестToolStripMenuItem1_Click);
             // 
             // открытьТестToolStripMenuItem
             // 
             this.открытьТестToolStripMenuItem.Name = "открытьТестToolStripMenuItem";
-            this.открытьТестToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.открытьТестToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.открытьТестToolStripMenuItem.Text = "Открыть тест";
             // 
             // сохранитьТестToolStripMenuItem
             // 
             this.сохранитьТестToolStripMenuItem.Name = "сохранитьТестToolStripMenuItem";
-            this.сохранитьТестToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.сохранитьТестToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сохранитьТестToolStripMenuItem.Text = "Сохранить тест";
+            this.сохранитьТестToolStripMenuItem.Click += new System.EventHandler(this.сохранитьТестToolStripMenuItem_Click);
             // 
             // статистикаToolStripMenuItem
             // 
@@ -194,6 +195,7 @@
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(277, 606);
             this.listBox.TabIndex = 4;
+            this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // splitContainer2
             // 
@@ -259,6 +261,7 @@
             this.buttonAddAnswer.TabIndex = 26;
             this.buttonAddAnswer.Text = "Добавть ответ";
             this.buttonAddAnswer.UseVisualStyleBackColor = false;
+            this.buttonAddAnswer.Click += new System.EventHandler(this.buttonAddAnswer_Click);
             // 
             // buttonСancelQuestion
             // 

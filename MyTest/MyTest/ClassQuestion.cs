@@ -13,7 +13,7 @@ namespace MyTest
         public string typeQuestion; //Тип вопроса
         public string answers; //Строка ответов
 
-        List<ClassQuestion> listQuestion = new List<ClassQuestion>();
+       
 
         public ClassQuestion(string textQ, string typeQ, string ans)
         {

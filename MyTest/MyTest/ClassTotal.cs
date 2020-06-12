@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MyTest
 {
@@ -17,6 +18,8 @@ namespace MyTest
         public static int NumberQuestion;
         public static int temp_interval = 0;
         public static string type;
+
+        public static string connectionString;
 
         //Метод создания динамического поля ввода
         //Параметры: Владелец, положение, размер компонента в контейнере
