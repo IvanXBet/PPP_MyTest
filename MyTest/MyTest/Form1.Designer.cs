@@ -43,7 +43,7 @@
             this.buttonWorkWithText.ForeColor = System.Drawing.Color.White;
             this.buttonWorkWithText.Location = new System.Drawing.Point(92, 97);
             this.buttonWorkWithText.Name = "buttonWorkWithText";
-            this.buttonWorkWithText.Size = new System.Drawing.Size(211, 53);
+            this.buttonWorkWithText.Size = new System.Drawing.Size(211, 50);
             this.buttonWorkWithText.TabIndex = 0;
             this.buttonWorkWithText.Text = "Работа с текстом";
             this.buttonWorkWithText.UseVisualStyleBackColor = false;
@@ -62,6 +62,7 @@
             this.buttonPassingTest.TabIndex = 1;
             this.buttonPassingTest.Text = "Прохождение теста";
             this.buttonPassingTest.UseVisualStyleBackColor = false;
+            this.buttonPassingTest.Click += new System.EventHandler(this.buttonPassingTest_Click);
             // 
             // buttonExit
             // 
@@ -72,10 +73,11 @@
             this.buttonExit.ForeColor = System.Drawing.Color.White;
             this.buttonExit.Location = new System.Drawing.Point(92, 245);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(211, 47);
+            this.buttonExit.Size = new System.Drawing.Size(211, 50);
             this.buttonExit.TabIndex = 2;
             this.buttonExit.Text = "Выход из приложения";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // labelNameFirstForm
             // 

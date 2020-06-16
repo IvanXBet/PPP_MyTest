@@ -13,3 +13,6 @@ D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.Na
 D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.newTest.resources
 D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.Exit.resources
 D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.typeQuestion.resources
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.authorizationStudents.resources
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.SelectTest.resources
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.PassingTest.resources

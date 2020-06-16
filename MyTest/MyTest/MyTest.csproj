@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="authorizationStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authorizationStudents.Designer.cs">
+      <DependentUpon>authorizationStudents.cs</DependentUpon>
+    </Compile>
     <Compile Include="authorizationTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     <Compile Include="newTest.Designer.cs">
       <DependentUpon>newTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="PassingTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassingTest.Designer.cs">
+      <DependentUpon>PassingTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registrationTeacher.cs">
@@ -91,12 +103,21 @@
     <Compile Include="registrationTeacher.Designer.cs">
       <DependentUpon>registrationTeacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelectTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectTest.Designer.cs">
+      <DependentUpon>SelectTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="typeQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="typeQuestion.Designer.cs">
       <DependentUpon>typeQuestion.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="authorizationStudents.resx">
+      <DependentUpon>authorizationStudents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="authorizationTeacher.resx">
       <DependentUpon>authorizationTeacher.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +133,9 @@
     <EmbeddedResource Include="newTest.resx">
       <DependentUpon>newTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PassingTest.resx">
+      <DependentUpon>PassingTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -123,6 +147,9 @@
     </Compile>
     <EmbeddedResource Include="registrationTeacher.resx">
       <DependentUpon>registrationTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectTest.resx">
+      <DependentUpon>SelectTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="typeQuestion.resx">
       <DependentUpon>typeQuestion.cs</DependentUpon>

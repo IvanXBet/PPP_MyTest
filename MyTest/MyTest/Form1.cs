@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MyTest
 {
@@ -15,6 +16,9 @@ namespace MyTest
         public FirstForm()
         {
             InitializeComponent();
+        }
+        public void close() {
+            this.close();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -25,13 +29,26 @@ namespace MyTest
         private void buttonWorkWithText_Click(object sender, EventArgs e)
         {
             authorizationTeacher authorizationTeacher = new authorizationTeacher();
-            this.Hide();
+
             authorizationTeacher.Show();
         }
 
         private void FirstForm_Load(object sender, EventArgs e)
         {
             
+            ClassTotal.connectionString = Properties.Settings.Default.MyTestConnectionString;
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Exit Exit = new Exit();
+            Exit.ShowDialog();
+        }
+
+        private void buttonPassingTest_Click(object sender, EventArgs e)
+        {
+            authorizationStudents authorizationStudents = new authorizationStudents();
+            authorizationStudents.Show();
         }
     }
 }

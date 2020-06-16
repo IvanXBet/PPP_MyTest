@@ -285,6 +285,27 @@ SELECT ID_test, ID_teacher, Name_test, Date_create, Comment FROM Tests WHERE (ID
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TestTeachersTableAdapter" GeneratorDataComponentClassName="TestTeachersTableAdapter" Name="TestTeachers" UserDataComponentName="TestTeachersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MyTestConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Teachers.ID_teacher, Teachers.Name_teacher, Tests.ID_test, Tests.Name_test
+FROM            Teachers INNER JOIN
+                         Tests ON Teachers.ID_teacher = Tests.ID_teacher</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_teacher" DataSetColumn="ID_teacher" />
+              <Mapping SourceColumn="Name_teacher" DataSetColumn="Name_teacher" />
+              <Mapping SourceColumn="ID_test" DataSetColumn="ID_test" />
+              <Mapping SourceColumn="Name_test" DataSetColumn="Name_test" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -293,7 +314,7 @@ SELECT ID_test, ID_teacher, Name_test, Date_create, Comment FROM Tests WHERE (ID
   <xs:element name="MyTestDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MyTestDataSet" msprop:Generator_UserDSName="MyTestDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Results" msprop:Generator_TableClassName="ResultsDataTable" msprop:Generator_TableVarName="tableResults" msprop:Generator_TablePropName="Results" msprop:Generator_RowDeletingName="ResultsRowDeleting" msprop:Generator_RowChangingName="ResultsRowChanging" msprop:Generator_RowEvHandlerName="ResultsRowChangeEventHandler" msprop:Generator_RowDeletedName="ResultsRowDeleted" msprop:Generator_UserTableName="Results" msprop:Generator_RowChangedName="ResultsRowChanged" msprop:Generator_RowEvArgName="ResultsRowChangeEvent" msprop:Generator_RowClassName="ResultsRow">
+        <xs:element name="Results" msprop:Generator_TableClassName="ResultsDataTable" msprop:Generator_TableVarName="tableResults" msprop:Generator_RowChangedName="ResultsRowChanged" msprop:Generator_TablePropName="Results" msprop:Generator_RowDeletingName="ResultsRowDeleting" msprop:Generator_RowChangingName="ResultsRowChanging" msprop:Generator_RowEvHandlerName="ResultsRowChangeEventHandler" msprop:Generator_RowDeletedName="ResultsRowDeleted" msprop:Generator_RowClassName="ResultsRow" msprop:Generator_UserTableName="Results" msprop:Generator_RowEvArgName="ResultsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_result" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_result" msprop:Generator_ColumnPropNameInRow="ID_result" msprop:Generator_ColumnPropNameInTable="ID_resultColumn" msprop:Generator_UserColumnName="ID_result" type="xs:int" />
@@ -304,7 +325,7 @@ SELECT ID_test, ID_teacher, Name_test, Date_create, Comment FROM Tests WHERE (ID
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Students" msprop:Generator_TableClassName="StudentsDataTable" msprop:Generator_TableVarName="tableStudents" msprop:Generator_TablePropName="Students" msprop:Generator_RowDeletingName="StudentsRowDeleting" msprop:Generator_RowChangingName="StudentsRowChanging" msprop:Generator_RowEvHandlerName="StudentsRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentsRowDeleted" msprop:Generator_UserTableName="Students" msprop:Generator_RowChangedName="StudentsRowChanged" msprop:Generator_RowEvArgName="StudentsRowChangeEvent" msprop:Generator_RowClassName="StudentsRow">
+        <xs:element name="Students" msprop:Generator_TableClassName="StudentsDataTable" msprop:Generator_TableVarName="tableStudents" msprop:Generator_RowChangedName="StudentsRowChanged" msprop:Generator_TablePropName="Students" msprop:Generator_RowDeletingName="StudentsRowDeleting" msprop:Generator_RowChangingName="StudentsRowChanging" msprop:Generator_RowEvHandlerName="StudentsRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentsRowDeleted" msprop:Generator_RowClassName="StudentsRow" msprop:Generator_UserTableName="Students" msprop:Generator_RowEvArgName="StudentsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_student" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_student" msprop:Generator_ColumnPropNameInRow="ID_student" msprop:Generator_ColumnPropNameInTable="ID_studentColumn" msprop:Generator_UserColumnName="ID_student" type="xs:int" />
@@ -319,7 +340,7 @@ SELECT ID_test, ID_teacher, Name_test, Date_create, Comment FROM Tests WHERE (ID
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Teachers" msprop:Generator_TableClassName="TeachersDataTable" msprop:Generator_TableVarName="tableTeachers" msprop:Generator_TablePropName="Teachers" msprop:Generator_RowDeletingName="TeachersRowDeleting" msprop:Generator_RowChangingName="TeachersRowChanging" msprop:Generator_RowEvHandlerName="TeachersRowChangeEventHandler" msprop:Generator_RowDeletedName="TeachersRowDeleted" msprop:Generator_UserTableName="Teachers" msprop:Generator_RowChangedName="TeachersRowChanged" msprop:Generator_RowEvArgName="TeachersRowChangeEvent" msprop:Generator_RowClassName="TeachersRow">
+        <xs:element name="Teachers" msprop:Generator_TableClassName="TeachersDataTable" msprop:Generator_TableVarName="tableTeachers" msprop:Generator_RowChangedName="TeachersRowChanged" msprop:Generator_TablePropName="Teachers" msprop:Generator_RowDeletingName="TeachersRowDeleting" msprop:Generator_RowChangingName="TeachersRowChanging" msprop:Generator_RowEvHandlerName="TeachersRowChangeEventHandler" msprop:Generator_RowDeletedName="TeachersRowDeleted" msprop:Generator_RowClassName="TeachersRow" msprop:Generator_UserTableName="Teachers" msprop:Generator_RowEvArgName="TeachersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_teacher" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_teacher" msprop:Generator_ColumnPropNameInRow="ID_teacher" msprop:Generator_ColumnPropNameInTable="ID_teacherColumn" msprop:Generator_UserColumnName="ID_teacher" type="xs:int" />
@@ -347,7 +368,7 @@ SELECT ID_test, ID_teacher, Name_test, Date_create, Comment FROM Tests WHERE (ID
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Teams" msprop:Generator_TableClassName="TeamsDataTable" msprop:Generator_TableVarName="tableTeams" msprop:Generator_TablePropName="Teams" msprop:Generator_RowDeletingName="TeamsRowDeleting" msprop:Generator_RowChangingName="TeamsRowChanging" msprop:Generator_RowEvHandlerName="TeamsRowChangeEventHandler" msprop:Generator_RowDeletedName="TeamsRowDeleted" msprop:Generator_UserTableName="Teams" msprop:Generator_RowChangedName="TeamsRowChanged" msprop:Generator_RowEvArgName="TeamsRowChangeEvent" msprop:Generator_RowClassName="TeamsRow">
+        <xs:element name="Teams" msprop:Generator_TableClassName="TeamsDataTable" msprop:Generator_TableVarName="tableTeams" msprop:Generator_RowChangedName="TeamsRowChanged" msprop:Generator_TablePropName="Teams" msprop:Generator_RowDeletingName="TeamsRowDeleting" msprop:Generator_RowChangingName="TeamsRowChanging" msprop:Generator_RowEvHandlerName="TeamsRowChangeEventHandler" msprop:Generator_RowDeletedName="TeamsRowDeleted" msprop:Generator_RowClassName="TeamsRow" msprop:Generator_UserTableName="Teams" msprop:Generator_RowEvArgName="TeamsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_team" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_team" msprop:Generator_ColumnPropNameInRow="ID_team" msprop:Generator_ColumnPropNameInTable="ID_teamColumn" msprop:Generator_UserColumnName="ID_team" type="xs:int" />
@@ -361,7 +382,7 @@ SELECT ID_test, ID_teacher, Name_test, Date_create, Comment FROM Tests WHERE (ID
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Tests" msprop:Generator_TableClassName="TestsDataTable" msprop:Generator_TableVarName="tableTests" msprop:Generator_TablePropName="Tests" msprop:Generator_RowDeletingName="TestsRowDeleting" msprop:Generator_RowChangingName="TestsRowChanging" msprop:Generator_RowEvHandlerName="TestsRowChangeEventHandler" msprop:Generator_RowDeletedName="TestsRowDeleted" msprop:Generator_UserTableName="Tests" msprop:Generator_RowChangedName="TestsRowChanged" msprop:Generator_RowEvArgName="TestsRowChangeEvent" msprop:Generator_RowClassName="TestsRow">
+        <xs:element name="Tests" msprop:Generator_TableClassName="TestsDataTable" msprop:Generator_TableVarName="tableTests" msprop:Generator_RowChangedName="TestsRowChanged" msprop:Generator_TablePropName="Tests" msprop:Generator_RowDeletingName="TestsRowDeleting" msprop:Generator_RowChangingName="TestsRowChanging" msprop:Generator_RowEvHandlerName="TestsRowChangeEventHandler" msprop:Generator_RowDeletedName="TestsRowDeleted" msprop:Generator_RowClassName="TestsRow" msprop:Generator_UserTableName="Tests" msprop:Generator_RowEvArgName="TestsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_test" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_test" msprop:Generator_ColumnPropNameInRow="ID_test" msprop:Generator_ColumnPropNameInTable="ID_testColumn" msprop:Generator_UserColumnName="ID_test" type="xs:int" />
@@ -378,6 +399,28 @@ SELECT ID_test, ID_teacher, Name_test, Date_create, Comment FROM Tests WHERE (ID
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TestTeachers" msprop:Generator_TableClassName="TestTeachersDataTable" msprop:Generator_TableVarName="tableTestTeachers" msprop:Generator_TablePropName="TestTeachers" msprop:Generator_RowDeletingName="TestTeachersRowDeleting" msprop:Generator_RowChangingName="TestTeachersRowChanging" msprop:Generator_RowEvHandlerName="TestTeachersRowChangeEventHandler" msprop:Generator_RowDeletedName="TestTeachersRowDeleted" msprop:Generator_UserTableName="TestTeachers" msprop:Generator_RowChangedName="TestTeachersRowChanged" msprop:Generator_RowEvArgName="TestTeachersRowChangeEvent" msprop:Generator_RowClassName="TestTeachersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_teacher" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_teacher" msprop:Generator_ColumnPropNameInRow="ID_teacher" msprop:Generator_ColumnPropNameInTable="ID_teacherColumn" msprop:Generator_UserColumnName="ID_teacher" type="xs:int" />
+              <xs:element name="Name_teacher" msprop:Generator_ColumnVarNameInTable="columnName_teacher" msprop:Generator_ColumnPropNameInRow="Name_teacher" msprop:Generator_ColumnPropNameInTable="Name_teacherColumn" msprop:Generator_UserColumnName="Name_teacher">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_test" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_test" msprop:Generator_ColumnPropNameInRow="ID_test" msprop:Generator_ColumnPropNameInTable="ID_testColumn" msprop:Generator_UserColumnName="ID_test" type="xs:int" />
+              <xs:element name="Name_test" msprop:Generator_ColumnVarNameInTable="columnName_test" msprop:Generator_ColumnPropNameInRow="Name_test" msprop:Generator_ColumnPropNameInTable="Name_testColumn" msprop:Generator_UserColumnName="Name_test">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -406,13 +449,19 @@ SELECT ID_test, ID_teacher, Name_test, Date_create, Comment FROM Tests WHERE (ID
       <xs:selector xpath=".//mstns:Tests" />
       <xs:field xpath="mstns:ID_test" />
     </xs:unique>
+    <xs:unique name="TestTeachers_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TestTeachers" />
+      <xs:field xpath="mstns:ID_teacher" />
+      <xs:field xpath="mstns:ID_test" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Results_Students" msdata:parent="Students" msdata:child="Results" msdata:parentkey="ID_student" msdata:childkey="ID_student" msprop:Generator_UserChildTable="Results" msprop:Generator_ChildPropName="GetResultsRows" msprop:Generator_UserRelationName="FK_Results_Students" msprop:Generator_RelationVarName="relationFK_Results_Students" msprop:Generator_UserParentTable="Students" msprop:Generator_ParentPropName="StudentsRow" />
-      <msdata:Relationship name="FK_Results_Tests" msdata:parent="Tests" msdata:child="Results" msdata:parentkey="ID_test" msdata:childkey="ID_test" msprop:Generator_UserChildTable="Results" msprop:Generator_ChildPropName="GetResultsRows" msprop:Generator_UserRelationName="FK_Results_Tests" msprop:Generator_RelationVarName="relationFK_Results_Tests" msprop:Generator_UserParentTable="Tests" msprop:Generator_ParentPropName="TestsRow" />
-      <msdata:Relationship name="FK_Students_Teams1" msdata:parent="Teams" msdata:child="Students" msdata:parentkey="ID_team" msdata:childkey="ID_team" msprop:Generator_UserChildTable="Students" msprop:Generator_ChildPropName="GetStudentsRows" msprop:Generator_UserRelationName="FK_Students_Teams1" msprop:Generator_RelationVarName="relationFK_Students_Teams1" msprop:Generator_UserParentTable="Teams" msprop:Generator_ParentPropName="TeamsRow" />
-      <msdata:Relationship name="FK_Tests_Teachers" msdata:parent="Teachers" msdata:child="Tests" msdata:parentkey="ID_teacher" msdata:childkey="ID_teacher" msprop:Generator_UserChildTable="Tests" msprop:Generator_ChildPropName="GetTestsRows" msprop:Generator_UserRelationName="FK_Tests_Teachers" msprop:Generator_ParentPropName="TeachersRow" msprop:Generator_RelationVarName="relationFK_Tests_Teachers" msprop:Generator_UserParentTable="Teachers" />
+      <msdata:Relationship name="FK_Results_Students" msdata:parent="Students" msdata:child="Results" msdata:parentkey="ID_student" msdata:childkey="ID_student" msprop:Generator_UserChildTable="Results" msprop:Generator_ChildPropName="GetResultsRows" msprop:Generator_UserRelationName="FK_Results_Students" msprop:Generator_ParentPropName="StudentsRow" msprop:Generator_RelationVarName="relationFK_Results_Students" msprop:Generator_UserParentTable="Students" />
+      <msdata:Relationship name="FK_Results_Tests" msdata:parent="Tests" msdata:child="Results" msdata:parentkey="ID_test" msdata:childkey="ID_test" msprop:Generator_UserChildTable="Results" msprop:Generator_ChildPropName="GetResultsRows" msprop:Generator_UserRelationName="FK_Results_Tests" msprop:Generator_ParentPropName="TestsRow" msprop:Generator_RelationVarName="relationFK_Results_Tests" msprop:Generator_UserParentTable="Tests" />
+      <msdata:Relationship name="FK_Students_Teams1" msdata:parent="Teams" msdata:child="Students" msdata:parentkey="ID_team" msdata:childkey="ID_team" msprop:Generator_UserChildTable="Students" msprop:Generator_ChildPropName="GetStudentsRows" msprop:Generator_UserRelationName="FK_Students_Teams1" msprop:Generator_ParentPropName="TeamsRow" msprop:Generator_RelationVarName="relationFK_Students_Teams1" msprop:Generator_UserParentTable="Teams" />
+      <msdata:Relationship name="FK_Tests_Teachers" msdata:parent="Teachers" msdata:child="Tests" msdata:parentkey="ID_teacher" msdata:childkey="ID_teacher" msprop:Generator_UserChildTable="Tests" msprop:Generator_ChildPropName="GetTestsRows" msprop:Generator_UserRelationName="FK_Tests_Teachers" msprop:Generator_RelationVarName="relationFK_Tests_Teachers" msprop:Generator_UserParentTable="Teachers" msprop:Generator_ParentPropName="TeachersRow" />
+      <msdata:Relationship name="FK_Tests_Teachers1" msdata:parent="TestTeachers" msdata:child="Tests" msdata:parentkey="ID_teacher" msdata:childkey="ID_teacher" msprop:Generator_UserChildTable="Tests" msprop:Generator_ChildPropName="GetTestsRows" msprop:Generator_UserRelationName="FK_Tests_Teachers1" msprop:Generator_RelationVarName="relationFK_Tests_Teachers1" msprop:Generator_UserParentTable="TestTeachers" msprop:Generator_ParentPropName="TestTeachersRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

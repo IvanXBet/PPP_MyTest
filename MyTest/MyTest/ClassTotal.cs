@@ -14,12 +14,16 @@ namespace MyTest
         public static string nameTeacher;
         public static string nameTest;
         public static string TypeQuestion;
-        public static int QuantityQuestions = 1;
-        public static int NumberQuestion;
+        public static int QuantityQuestions = 0;
+        public static int NumberQuestion = 1;
         public static int temp_interval = 0;
         public static string type;
-
+        public static string ans = "";
         public static string connectionString;
+        //
+        public static int idStud; //ID студента при регистрации
+        public static int idTest; //ID выбранного теста
+
 
         //Метод создания динамического поля ввода
         //Параметры: Владелец, положение, размер компонента в контейнере
@@ -27,7 +31,7 @@ namespace MyTest
         {
             TextBox tb = new TextBox(); //Выделение памяти под компонент
             tb.Multiline = true; //Настройка необходимых свойств
-            tb.ScrollBars = ScrollBars.Both;
+            
             tb.Height = height;
             tb.Width = width;
             tb.Left = left;

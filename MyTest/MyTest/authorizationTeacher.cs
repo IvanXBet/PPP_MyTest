@@ -12,9 +12,11 @@ namespace MyTest
 {
     public partial class authorizationTeacher : Form
     {
+        
         public authorizationTeacher()
         {
             InitializeComponent();
+            
         }
 
         private void buttonSingin_Click(object sender, EventArgs e)
@@ -37,7 +39,9 @@ namespace MyTest
                 ClassTotal.nameTeacher = filter.ElementAt(0).Name_teacher;
                 //MessageBox.Show("Вы успешно авторизовались как преподаватель.");
                 newTest newTest = new newTest();
+               
                 this.Hide();
+                
                 newTest.ShowDialog();
                 
             }

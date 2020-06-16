@@ -44,7 +44,7 @@ namespace MyTest
                         break;
 
                     case "Множественный выбор":
-                        m_parent.splitContainer3.Panel1.Controls.Clear();
+                        //m_parent.splitContainer3.Panel1.Controls.Clear();
                         for (int i = 0; i < 4; i++)
                         {
                             ClassTotal.CheckBoxDynamic(m_parent.splitContainer3.Panel1, 3, 3 + (i * 40), 17, 30);
@@ -62,7 +62,8 @@ namespace MyTest
                        
 
                         ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 3, 3, 330, 30);
-                       
+                        m_parent.buttonAddAnswer.Visible = false;
+
                         break;
 
                     case "На соответствие":
@@ -74,10 +75,6 @@ namespace MyTest
                        
                         break;
                 }
-
-
-
-                
                 this.Close();
             }
         }
