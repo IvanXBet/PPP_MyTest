@@ -30,10 +30,12 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.textBoxTextQ = new System.Windows.Forms.TextBox();
-            this.buttonSelectTest = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonNextQ = new System.Windows.Forms.Button();
+            this.button = new System.Windows.Forms.Button();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.teachersTableAdapter1 = new MyTest.MyTestDataSetTableAdapters.TeachersTableAdapter();
+            this.resultsTableAdapter1 = new MyTest.MyTestDataSetTableAdapters.ResultsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -59,8 +61,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel2.Controls.Add(this.button1);
-            this.splitContainer1.Panel2.Controls.Add(this.buttonSelectTest);
+            this.splitContainer1.Panel2.Controls.Add(this.buttonNextQ);
+            this.splitContainer1.Panel2.Controls.Add(this.button);
             this.splitContainer1.Panel2.Controls.Add(this.progressBar);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1156, 623);
@@ -82,54 +84,64 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.splitContainer2.Panel2.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F);
             this.splitContainer2.Size = new System.Drawing.Size(1156, 551);
             this.splitContainer2.SplitterDistance = 140;
             this.splitContainer2.TabIndex = 0;
             // 
-            // progressBar
-            // 
-            this.progressBar.Location = new System.Drawing.Point(34, 18);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(226, 37);
-            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar.TabIndex = 0;
-            // 
             // textBoxTextQ
             // 
             this.textBoxTextQ.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxTextQ.Font = new System.Drawing.Font("Yu Gothic UI Light", 14F);
             this.textBoxTextQ.Location = new System.Drawing.Point(0, 0);
             this.textBoxTextQ.Multiline = true;
             this.textBoxTextQ.Name = "textBoxTextQ";
             this.textBoxTextQ.Size = new System.Drawing.Size(1156, 140);
             this.textBoxTextQ.TabIndex = 0;
             // 
-            // buttonSelectTest
+            // buttonNextQ
             // 
-            this.buttonSelectTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonSelectTest.FlatAppearance.BorderSize = 0;
-            this.buttonSelectTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSelectTest.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F);
-            this.buttonSelectTest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
-            this.buttonSelectTest.Location = new System.Drawing.Point(291, 19);
-            this.buttonSelectTest.Name = "buttonSelectTest";
-            this.buttonSelectTest.Size = new System.Drawing.Size(125, 37);
-            this.buttonSelectTest.TabIndex = 20;
-            this.buttonSelectTest.Text = "Завершить";
-            this.buttonSelectTest.UseVisualStyleBackColor = false;
+            this.buttonNextQ.BackColor = System.Drawing.Color.Orange;
+            this.buttonNextQ.FlatAppearance.BorderSize = 0;
+            this.buttonNextQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNextQ.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F);
+            this.buttonNextQ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
+            this.buttonNextQ.Location = new System.Drawing.Point(922, 18);
+            this.buttonNextQ.Name = "buttonNextQ";
+            this.buttonNextQ.Size = new System.Drawing.Size(188, 37);
+            this.buttonNextQ.TabIndex = 21;
+            this.buttonNextQ.Text = "Следующий вопрос";
+            this.buttonNextQ.UseVisualStyleBackColor = false;
+            this.buttonNextQ.Click += new System.EventHandler(this.buttonNextQ_Click);
             // 
-            // button1
+            // button
             // 
-            this.button1.BackColor = System.Drawing.Color.Orange;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
-            this.button1.Location = new System.Drawing.Point(922, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 37);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Следующий вопрос";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button.FlatAppearance.BorderSize = 0;
+            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F);
+            this.button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
+            this.button.Location = new System.Drawing.Point(291, 19);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(125, 37);
+            this.button.TabIndex = 20;
+            this.button.Text = "Завершить";
+            this.button.UseVisualStyleBackColor = false;
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(34, 18);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(226, 37);
+            this.progressBar.TabIndex = 0;
+            // 
+            // teachersTableAdapter1
+            // 
+            this.teachersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // resultsTableAdapter1
+            // 
+            this.resultsTableAdapter1.ClearBeforeFill = true;
             // 
             // PassingTest
             // 
@@ -139,7 +151,8 @@
             this.ClientSize = new System.Drawing.Size(1156, 623);
             this.Controls.Add(this.splitContainer1);
             this.Name = "PassingTest";
-            this.Text = "PassingTest";
+            this.Text = "Прохождение теста";
+            this.Load += new System.EventHandler(this.PassingTest_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -158,7 +171,9 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.TextBox textBoxTextQ;
         private System.Windows.Forms.ProgressBar progressBar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button buttonSelectTest;
+        private System.Windows.Forms.Button buttonNextQ;
+        private System.Windows.Forms.Button button;
+        private MyTestDataSetTableAdapters.TeachersTableAdapter teachersTableAdapter1;
+        private MyTestDataSetTableAdapters.ResultsTableAdapter resultsTableAdapter1;
     }
 }

@@ -24,10 +24,32 @@ namespace MyTest
         public static int idStud; //ID студента при регистрации
         public static int idTest; //ID выбранного теста
 
+        public static void LabelDynamic(Panel panel, int left, int top, int width, int height, string labelText)
+        {
+            Label l = new Label();
+            l.Height = height;
+            l.Width = width;
+            l.Left = left;
+            l.Top = top;
+            l.Text = labelText;
+            panel.Controls.Add(l);
+        }
+        public static void ComboBoxDynamic(Panel panel, int left, int top, int width, int height, string[] mas)
+        {
+            ComboBox cb = new ComboBox(); //Создание динамического компонента
+            cb.Height = height; //Настройка свойств компонента
+            cb.Width = width;
+            cb.Left = left;
+            cb.Top = top;
+            cb.Items.AddRange(mas); //Создание списка элементов
+            cb.Text = cb.Items[0].ToString();
+            panel.Controls.Add(cb); //Принадлежность динамической панели
+        }
+    
 
-        //Метод создания динамического поля ввода
-        //Параметры: Владелец, положение, размер компонента в контейнере
-        public static void TextBoxDynamic(Panel panel, int left, int top, int width, int height)
+    //Метод создания динамического поля ввода
+    //Параметры: Владелец, положение, размер компонента в контейнере
+    public static void TextBoxDynamic(Panel panel, int left, int top, int width, int height)
         {
             TextBox tb = new TextBox(); //Выделение памяти под компонент
             tb.Multiline = true; //Настройка необходимых свойств
@@ -37,7 +59,7 @@ namespace MyTest
             tb.Left = left;
             tb.Top = top;
             
-            tb.Text = " ";
+            tb.Text = "";
             tb.ReadOnly = false;
             panel.Controls.Add(tb); //Указание владельца этого компонента
         }

@@ -108,7 +108,7 @@ namespace MyTest
 
                                 if (rb.Checked) //Кнопка включена – вопрос выбран
                                 {
-                                    ClassTotal.ans += " +"+tb.Text + ";"; //Учитывается +
+                                    ClassTotal.ans += "+"+tb.Text + ";"; //Учитывается +
 
                                     
                                      right = true; //Одна кнопка выбрана

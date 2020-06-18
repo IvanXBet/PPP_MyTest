@@ -55,12 +55,11 @@ namespace MyTest
 
                     case "Ввод слова":
                         ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 3, 3, 330, 30);
-                        
+                        m_parent.buttonAddAnswer.Visible = false;
                         break;
 
                     case "Ввод значения":
                        
-
                         ClassTotal.TextBoxDynamic(m_parent.splitContainer3.Panel1, 3, 3, 330, 30);
                         m_parent.buttonAddAnswer.Visible = false;
 
