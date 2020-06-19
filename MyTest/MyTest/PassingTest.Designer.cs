@@ -110,7 +110,7 @@
             this.buttonNextQ.Name = "buttonNextQ";
             this.buttonNextQ.Size = new System.Drawing.Size(188, 37);
             this.buttonNextQ.TabIndex = 21;
-            this.buttonNextQ.Text = "Следующий вопрос";
+            this.buttonNextQ.Text = "Ответить";
             this.buttonNextQ.UseVisualStyleBackColor = false;
             this.buttonNextQ.Click += new System.EventHandler(this.buttonNextQ_Click);
             // 
@@ -121,7 +121,7 @@
             this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F);
             this.button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
-            this.button.Location = new System.Drawing.Point(291, 19);
+            this.button.Location = new System.Drawing.Point(775, 18);
             this.button.Name = "button";
             this.button.Size = new System.Drawing.Size(125, 37);
             this.button.TabIndex = 20;
@@ -130,9 +130,9 @@
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(34, 18);
+            this.progressBar.Location = new System.Drawing.Point(12, 37);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(226, 37);
+            this.progressBar.Size = new System.Drawing.Size(145, 19);
             this.progressBar.TabIndex = 0;
             // 
             // teachersTableAdapter1

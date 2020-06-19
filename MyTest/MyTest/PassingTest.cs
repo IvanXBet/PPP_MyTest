@@ -36,7 +36,6 @@ namespace MyTest
             answers = question.answers;
             
             answerMas = answers.Split(';'); //Деление ответов на части
-            MessageBox.Show(answerMas[0]);
             countAnswers = answerMas.Length - 1; //Количество ответов
             splitContainer2.Panel2.Controls.Clear(); //Готовим панель для динамических компонентов
             trueAnswer = ""; //Строка правильных ответов
@@ -64,14 +63,14 @@ namespace MyTest
 
                 case "Ввод значения":
                     trueAnswer = answerMas[0];
-                    ClassTotal.TextBoxDynamic(splitContainer2.Panel2, 3, 3, 330, 20);
+                    ClassTotal.TextBoxDynamic(splitContainer2.Panel2, 3, 3, 330, 30);
                     break;
 
                 case "Ввод слова":
                         for (int i = 0; i < countAnswers; i++)
                         {
                             trueAnswer += answerMas[i];
-                            ClassTotal.TextBoxDynamic(splitContainer2.Panel2, 3, 3 + (i * 40), 330, 20);
+                            ClassTotal.TextBoxDynamic(splitContainer2.Panel2, 3, 3 + (i * 40), 330, 30);
                         }
                     break;
 
@@ -101,6 +100,7 @@ namespace MyTest
 
         private void buttonNextQ_Click(object sender, EventArgs e)
         {
+            this.progressBar.Value++;
             //Обработка ответов на текущий вопрос теста
             string s = ""; //Строка из + и – по ответам
             bool right = false; //Флаг правильности ответа
@@ -141,6 +141,8 @@ namespace MyTest
                             s = tb.Text;
                         }
                     }
+                    if (s == trueAnswer)
+                        right = true;
                     break;
                     case "Ввод значения":
                     for (int i = 0; i < splitContainer2.Panel2.Controls.Count; i++)
@@ -151,14 +153,18 @@ namespace MyTest
                             s = tb.Text;
                         }
                     }
-                       break;
+                    if (s == trueAnswer)
+                        right = true;
+                    break;
 
                 case "На соответствие":
-                    for (int i = 0; i < splitContainer2.Panel1.Controls.Count; i++)
+                    
+                    //MessageBox.Show(trueAnswer);
+                    for (int i = 0; i < splitContainer2.Panel2.Controls.Count; i++)
                     {
-                        if (splitContainer2.Panel1.Controls[i] is ComboBox)
+                        if (splitContainer2.Panel2.Controls[i] is ComboBox)
                         {
-                            ComboBox tb2 = this.splitContainer2.Panel1.Controls[i] as ComboBox;
+                            ComboBox tb2 = this.splitContainer2.Panel2.Controls[i] as ComboBox;
                             s += tb2.Text;
                         }
 
@@ -167,7 +173,8 @@ namespace MyTest
                         right = true;
                     break;
             }
-            //Анализ результата ответа на текущий вопрос
+             
+            //Анализ результата ответа натекущий вопрос
             if (right)
             {
                 MessageBox.Show(" Вопрос отвечен верно ");
@@ -176,10 +183,8 @@ namespace MyTest
             else
             {
                 MessageBox.Show(" Вопрос отвечен не верно");
-                MessageBox.Show(trueAnswer, s);
-
             }
-                            //Проверка завершения теста
+            //Проверка завершения теста
             if (currentNumber < totalNumber) //Еще не все вопросы пройдены
             {
                 currentNumber++; //Номер следующего вопроса
@@ -194,6 +199,7 @@ namespace MyTest
                 else
                 if (proc > 50) mark = 3;
                 else mark = 2;
+                MessageBox.Show($" Тест завершон. \r\n Ваша оценка: {mark}");
                 //Занесение данных о результатах прохождения теста в таблицу Results БД
                 this.resultsTableAdapter1.Insert(ClassTotal.idStud, ClassTotal.idTest, DateTime.Now, mark);
                 this.Close();

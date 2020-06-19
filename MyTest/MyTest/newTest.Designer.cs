@@ -54,6 +54,7 @@
             this.toolStripLabelQuantityQuestions = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabelNumberQuestion = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabelTypeQuestion = new System.Windows.Forms.ToolStripLabel();
+            this.myTestDataSet1 = new MyTest.MyTestDataSet();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -68,6 +69,7 @@
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.myTestDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -95,20 +97,20 @@
             // новыйТестToolStripMenuItem1
             // 
             this.новыйТестToolStripMenuItem1.Name = "новыйТестToolStripMenuItem1";
-            this.новыйТестToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.новыйТестToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.новыйТестToolStripMenuItem1.Text = "Новый тест";
             this.новыйТестToolStripMenuItem1.Click += new System.EventHandler(this.новыйТестToolStripMenuItem1_Click);
             // 
             // открытьТестToolStripMenuItem
             // 
             this.открытьТестToolStripMenuItem.Name = "открытьТестToolStripMenuItem";
-            this.открытьТестToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.открытьТестToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.открытьТестToolStripMenuItem.Text = "Открыть тест";
             // 
             // сохранитьТестToolStripMenuItem
             // 
             this.сохранитьТестToolStripMenuItem.Name = "сохранитьТестToolStripMenuItem";
-            this.сохранитьТестToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьТестToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.сохранитьТестToolStripMenuItem.Text = "Сохранить тест";
             this.сохранитьТестToolStripMenuItem.Click += new System.EventHandler(this.сохранитьТестToolStripMenuItem_Click);
             // 
@@ -117,6 +119,7 @@
             this.статистикаToolStripMenuItem.Name = "статистикаToolStripMenuItem";
             this.статистикаToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.статистикаToolStripMenuItem.Text = "Статистика";
+            this.статистикаToolStripMenuItem.Click += new System.EventHandler(this.статистикаToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
@@ -352,6 +355,11 @@
             this.toolStripLabelTypeQuestion.Size = new System.Drawing.Size(82, 22);
             this.toolStripLabelTypeQuestion.Text = "Тип вопроса: ";
             // 
+            // myTestDataSet1
+            // 
+            this.myTestDataSet1.DataSetName = "MyTestDataSet";
+            this.myTestDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // newTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,6 +392,7 @@
             this.splitContainer3.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.myTestDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,5 +425,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabelNumberQuestion;
         private System.Windows.Forms.ToolStripLabel toolStripLabelTypeQuestion;
         public System.Windows.Forms.Button buttonСancelQuestion;
+        private MyTestDataSet myTestDataSet1;
     }
 }

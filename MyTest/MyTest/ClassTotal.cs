@@ -23,6 +23,8 @@ namespace MyTest
         //
         public static int idStud; //ID студента при регистрации
         public static int idTest; //ID выбранного теста
+        //
+        public MyTestDataSet.StatisticsDataTable records;
 
         public static void LabelDynamic(Panel panel, int left, int top, int width, int height, string labelText)
         {

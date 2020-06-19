@@ -324,6 +324,12 @@ namespace MyTest
             toolStripLabelNumberQuestion.Text = "Номер вопроса: " + (listBox.SelectedIndex + 1);
         }
 
+        private void статистикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StatisticsTest StatisticsTest = new StatisticsTest();
+            StatisticsTest.Show();
+        }
+
         private void newTest_Load(object sender, EventArgs e)
         {
             toolStripLabelQuantityQuestions.Text +=  "0  ";
