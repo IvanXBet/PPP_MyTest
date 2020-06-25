@@ -22,10 +22,7 @@ namespace MyTest
         private void buttonSingin_Click(object sender, EventArgs e)
         {
             string log, pass;
-            //
-            textBoxLogin.Text = "LogT1";
-            textBoxPassword.Text = "123";
-            //
+            
             log = textBoxLogin.Text;
             pass = textBoxPassword.Text;
             

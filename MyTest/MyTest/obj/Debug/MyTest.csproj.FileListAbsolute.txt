@@ -17,3 +17,4 @@ D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.au
 D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.SelectTest.resources
 D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.PassingTest.resources
 D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.StatisticsTest.resources
+D:\ПРАКТИКА\03.01 Прикладное\MyTest\MyTest\obj\Debug\MyTest.Screen.resources

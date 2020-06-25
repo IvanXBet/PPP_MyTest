@@ -106,6 +106,12 @@
     <Compile Include="registrationTeacher.Designer.cs">
       <DependentUpon>registrationTeacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen.Designer.cs">
+      <DependentUpon>Screen.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="registrationTeacher.resx">
       <DependentUpon>registrationTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen.resx">
+      <DependentUpon>Screen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectTest.resx">
       <DependentUpon>SelectTest.cs</DependentUpon>

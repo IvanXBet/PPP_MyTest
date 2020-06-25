@@ -51,18 +51,30 @@ namespace MyTest
             else {
                 try
                 {
-                    this.teachersTableAdapter1.Insert(log, pass, name);
-                    var temp = this.teachersTableAdapter1.GetData(); //Все записи после добавления
-                    int maxID = temp.Last().ID_teacher; //ID добавленной записи
-                    ClassTotal.idTeacher = maxID;
-                    ClassTotal.nameTeacher = name;
-                    MessageBox.Show("Ваши учетные данные занесены в БД успешно");
+                    if (log == "" || pass == "" || name == "" || pass2 == "")
+                    {
+                        MessageBox.Show("Введины не все днные");
+                    }
+
+                    else if (pass == pass2)
+                    {
+                        this.teachersTableAdapter1.Insert(log, pass, name);
+                        var temp = this.teachersTableAdapter1.GetData(); //Все записи после добавления
+                        int maxID = temp.Last().ID_teacher; //ID добавленной записи
+                        ClassTotal.idTeacher = maxID;
+                        ClassTotal.nameTeacher = name;
+                        MessageBox.Show("Ваши учетные данные занесены в БД успешно");
 
 
-                    newTest newTest = new newTest();
-                    this.Hide();
-                    newTest.ShowDialog();
-                    MessageBox.Show("Переход в форму работы с текстом");
+                        newTest newTest = new newTest();
+                        this.Hide();
+                        newTest.ShowDialog();
+                        MessageBox.Show("Переход в форму работы с текстом");
+                    }
+                    else {
+                        MessageBox.Show("Пароли не совпадают");
+                    }
+                    
                 }
                 catch
                 {
